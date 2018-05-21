@@ -1,0 +1,6 @@
+# to convert a list of row, which is an iterator, to a list of list
+import unicodecsv
+enrollments=[]
+with open('filenames','rb') as f:
+  reader = unicodecsv.DictRead(f) # each row,which is dictionary, but reader is an interator, not list yet.
+  enrollments = list(reader)
